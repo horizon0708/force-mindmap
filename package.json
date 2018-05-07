@@ -1,5 +1,5 @@
 {
-  "name": "d3-force-mindmap",
+  "name": "force-mindmap",
   "version": "1.0.0",
   "description": "Interactive mind map written with d3 and typescript.",
   "main": "index.js",

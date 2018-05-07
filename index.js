@@ -1,6 +1,4 @@
+// export { default } from './lib/canvasMindMap';
+import MindMap from './lib/canvasMindMap';
 
-var canvasMap = require('./lib/canvasMindMap');
-
-module.exports = {
-  default: canvasMap
-}
+export default MindMap;
