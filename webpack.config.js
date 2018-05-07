@@ -10,11 +10,14 @@ module.exports = {
     rules: [
       {
         test: /\.ts(x?)$/, 
-        loader: "ts-loader",
-        exclude: "/node_modules/"
+        loader: ["ts-loader"],
+        exclude: "/node_modules/",
       }
     ]
 	},
+  externals: {
+    "d3": "d3"
+  },
 	resolve: {
     extensions: [".ts", ".tsx"],
     mainFields: [
