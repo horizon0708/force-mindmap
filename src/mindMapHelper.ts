@@ -325,7 +325,7 @@ export function tagsToNodesAndLinks(
       skill: 5
     };
   });
-  const links = tags
+  let outputLinks = tags
     .map(node => {
       return node.children.map(child => {
         return {
@@ -333,11 +333,11 @@ export function tagsToNodesAndLinks(
           target: node.parent
         };
       });
-    })
-    .reduce((a, b) => a.concat(b));
+    });
+  outputLinks = outputLinks.length >0 ? outputLinks.reduce((a,b) => a.concat(b)) : [];
   return {
     nodes,
-    links,
+    links:outputLinks,
   };
 }
 
@@ -397,8 +397,8 @@ export function generateTagColorMap(tagRelation: Relation[], tagColorRange: stri
     if(counter > tagColorRange.length -1){
       counter = 0;
     }
-    counter++;
     output[tagRelation[index].parent] = tagColorRange[counter];
+    counter++;
   }
   return output;
 }

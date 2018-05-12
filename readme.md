@@ -54,7 +54,7 @@ For example, imagine a node structure like `grandfather -> father -> child`.
 - for `father`, this will return `["grandfater"]`.
 - for `grandfather`, this will return `[]`.
 
-#Customisation/ Setup
+#Customisation
 Force-Mindmap exposes various variables for you to configure the mindmap. Most are pretty self explanatory.
 
 property name | type | default 

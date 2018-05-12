@@ -140,6 +140,8 @@ export default class CanvasForceMap {
     tags: Relation[]
   ) => {
     this.relations = relations;
+    this.currentNode = origin;
+    this.originNode = origin;
     const nodeAndLinks = this.initialDataToNodesAndLinks(
       nameAndSkills,
       relations
@@ -152,8 +154,6 @@ export default class CanvasForceMap {
       this.originalTagNodes = tagData.nodes;
       this.tagColorMap = generateTagColorMap(tags, this.tagColorRange);
     }
-    this.currentNode = origin;
-    this.originNode = origin;
     this.links = nodeAndLinks.links;
     this.originalLinks = this.links;
     this.nodes = nodeAndLinks.nodes;
